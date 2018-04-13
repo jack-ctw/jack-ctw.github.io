@@ -79,17 +79,21 @@
 
 
 
-<meta name="description" content="1 . maven         http://blog.csdn.net/qq_32588349/article/details/51461182 2 . svn         http://blog.csdn.net/qq_27093465/article/details/74898489 3 . tomcat         http://blog.csdn.net/chenshun12">
+<meta name="description" content="背景:1.Reids从库只有读取能力,没有写入能力;只支持主从复制,不支持主主复制.2.减轻主库的压力,并可以关闭主库的持久化功能,将持久化交给从库处理.可读写分离3 .主挂掉了,只能提供读服务,所以需要哨兵监视,并投票将从库升级为主库. 下载由于redis官方并不支持windows操作系统，所以官网上是下不到的，需要到gitlab,下载地址:    https://github.com/Micr">
 <meta property="og:type" content="article">
-<meta property="og:title" content="idea快速跑起来">
-<meta property="og:url" content="http://yoursite.com/2018/03/16/idea快速跑起来/index.html">
+<meta property="og:title" content="明一">
+<meta property="og:url" content="http://yoursite.com/2018/04/13/redis高可用_window/index.html">
 <meta property="og:site_name" content="明一">
-<meta property="og:description" content="1 . maven         http://blog.csdn.net/qq_32588349/article/details/51461182 2 . svn         http://blog.csdn.net/qq_27093465/article/details/74898489 3 . tomcat         http://blog.csdn.net/chenshun12">
+<meta property="og:description" content="背景:1.Reids从库只有读取能力,没有写入能力;只支持主从复制,不支持主主复制.2.减轻主库的压力,并可以关闭主库的持久化功能,将持久化交给从库处理.可读写分离3 .主挂掉了,只能提供读服务,所以需要哨兵监视,并投票将从库升级为主库. 下载由于redis官方并不支持windows操作系统，所以官网上是下不到的，需要到gitlab,下载地址:    https://github.com/Micr">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-03-20T09:34:08.478Z">
+<meta property="og:image" content="https://i.imgur.com/VhAxxTo.png">
+<meta property="og:image" content="https://i.imgur.com/YQH0hyH.png">
+<meta property="og:image" content="https://i.imgur.com/wbdhlOz.png">
+<meta property="og:updated_time" content="2018-04-13T09:48:49.066Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="idea快速跑起来">
-<meta name="twitter:description" content="1 . maven         http://blog.csdn.net/qq_32588349/article/details/51461182 2 . svn         http://blog.csdn.net/qq_27093465/article/details/74898489 3 . tomcat         http://blog.csdn.net/chenshun12">
+<meta name="twitter:title" content="明一">
+<meta name="twitter:description" content="背景:1.Reids从库只有读取能力,没有写入能力;只支持主从复制,不支持主主复制.2.减轻主库的压力,并可以关闭主库的持久化功能,将持久化交给从库处理.可读写分离3 .主挂掉了,只能提供读服务,所以需要哨兵监视,并投票将从库升级为主库. 下载由于redis官方并不支持windows操作系统，所以官网上是下不到的，需要到gitlab,下载地址:    https://github.com/Micr">
+<meta name="twitter:image" content="https://i.imgur.com/VhAxxTo.png">
 
 
 
@@ -119,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/16/idea快速跑起来/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/13/redis高可用_window/"/>
 
 
 
 
 
-  <title>idea快速跑起来 | 明一</title>
+  <title> | 明一</title>
   
 
 
@@ -232,7 +236,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/16/idea快速跑起来/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/13/redis高可用_window/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -249,7 +253,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">idea快速跑起来</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -261,8 +265,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-16T11:20:14+08:00">
-                2018-03-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-13T17:33:34+08:00">
+                2018-04-13
               </time>
             
 
@@ -299,13 +303,40 @@
       
 
       
-        <p>1 . maven        </p>
-<pre><code>http://blog.csdn.net/qq_32588349/article/details/51461182
-</code></pre><p>2 . svn        </p>
-<pre><code>http://blog.csdn.net/qq_27093465/article/details/74898489
-</code></pre><p>3 . tomcat        </p>
-<pre><code>http://blog.csdn.net/chenshun123/article/details/51285890
-</code></pre><p>4 . 检查pom引起的冲突    </p>
+        <h3 id="背景"><a href="#背景" class="headerlink" title="背景:"></a>背景:</h3><p>1.Reids从库只有读取能力,没有写入能力;只支持主从复制,不支持主主复制.<br>2.减轻主库的压力,并可以关闭主库的持久化功能,将持久化交给从库处理.可读写分离<br>3 .主挂掉了,只能提供读服务,所以需要哨兵监视,并投票将从库升级为主库.</p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>由于redis官方并不支持windows操作系统，所以官网上是下不到的，需要到gitlab,下载地址:  </p>
+<blockquote>
+<p><a href="https://github.com/MicrosoftArchive/redis/releases" target="_blank" rel="noopener">https://github.com/MicrosoftArchive/redis/releases</a></p>
+</blockquote>
+<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><p>注意解压到的目录不能有中文和特殊字符<br><img src="https://i.imgur.com/VhAxxTo.png" alt=""></p>
+<h3 id="目标架构"><a href="#目标架构" class="headerlink" title="目标架构"></a>目标架构</h3><p>m 　  　　Master 　  ip:127.0.0.1  port:6379<br>s-1　　　slave1    　 ip:127.0.0.1  port:6380<br>s-2　　　slave2     　 ip:127.0.0.1  port:6381    </p>
+<h3 id="修改-redis-windows-conf"><a href="#修改-redis-windows-conf" class="headerlink" title="修改 redis.windows.conf"></a>修改 redis.windows.conf</h3><p>m redis.conf配置文件的如下几个参数：</p>
+<blockquote>
+<p>port 6379<br>bind 127.0.0.1    </p>
+</blockquote>
+<p>s-1 redis.conf配置文件的如下几个参数：</p>
+<blockquote>
+<p>port 6380<br>bind 127.0.0.1<br>slaveof 127.0.0.1 6379  // 设置master服务器为6379</p>
+</blockquote>
+<p>s-2 redis.conf配置文件的如下几个参数:</p>
+<blockquote>
+<p>port 6381<br>bind 127.0.0.1<br>slaveof 127.0.0.1 6379  // 设置master服务器为6379</p>
+</blockquote>
+<h3 id="创建sentinel-conf"><a href="#创建sentinel-conf" class="headerlink" title="创建sentinel.conf"></a>创建sentinel.conf</h3><p>m 创建哨兵配置,内容如下</p>
+<blockquote>
+<p>port 26379<br>sentinel monitor mymaster 127.0.0.1 6379 2<br>sentinel down-after-milliseconds mymaster 5000<br>sentinel parallel-syncs mymaster 1<br>sentinel failover-timeout mymaster 15000</p>
+</blockquote>
+<p>s-1 :</p>
+<blockquote>
+<p>port 26479<br>sentinel monitor mymaster 127.0.0.1 6379 2<br>sentinel down-after-milliseconds mymaster 5000<br>sentinel parallel-syncs mymaster 1<br>sentinel failover-timeout mymaster 15000 </p>
+</blockquote>
+<p>s-3 : 同理</p>
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>进入对应的目录,执行启动命令.没开启后台进程,所以需要两次cmd执行  </p>
+<blockquote>
+<p>redis-server.exe redis.conf<br>redis-server.exe sentinel.conf –sentinel</p>
+</blockquote>
+<h3 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h3><p>配置文件不能有tab缩进符</p>
+<h3 id="配置文件详解"><a href="#配置文件详解" class="headerlink" title="配置文件详解"></a>配置文件详解</h3><p>redis.windows.conf<br><img src="https://i.imgur.com/YQH0hyH.png" alt=""><br>sentinel.conf<br><img src="https://i.imgur.com/wbdhlOz.png" alt=""></p>
 
       
     </div>
@@ -330,14 +361,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/03/16/劝学/" rel="next" title="劝学">
+                <i class="fa fa-chevron-left"></i> 劝学
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/16/劝学/" rel="prev" title="劝学">
-                劝学 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/13/reids主从-哨兵-window版/" rel="prev" title="reids主从+哨兵_window版">
+                reids主从+哨兵_window版 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -390,8 +425,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -433,6 +477,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载"><span class="nav-number">2.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解压"><span class="nav-number">3.</span> <span class="nav-text">解压</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目标架构"><span class="nav-number">4.</span> <span class="nav-text">目标架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改-redis-windows-conf"><span class="nav-number">5.</span> <span class="nav-text">修改 redis.windows.conf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建sentinel-conf"><span class="nav-number">6.</span> <span class="nav-text">创建sentinel.conf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动"><span class="nav-number">7.</span> <span class="nav-text">启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提示"><span class="nav-number">8.</span> <span class="nav-text">提示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置文件详解"><span class="nav-number">9.</span> <span class="nav-text">配置文件详解</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
