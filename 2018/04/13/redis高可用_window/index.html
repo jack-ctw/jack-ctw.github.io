@@ -79,20 +79,20 @@
 
 
 
-<meta name="description" content="reids主从+哨兵_window版 背景:1.Reids从库只有读取能力,没有写入能力;只支持主从复制,不支持主主复制.2.减轻主库的压力,并可以关闭主库的持久化功能,将持久化交给从库处理.可读写分离3 .主挂掉了,只能提供读服务,所以需要哨兵监视,并投票将从库升级为主库. 下载由于redis官方并不支持windows操作系统，所以官网上是下不到的，需要到gitlab,下载地址:    http">
+<meta name="description" content="========================= title: reids主从+哨兵_window版  ========================= 背景:1.Reids从库只有读取能力,没有写入能力;只支持主从复制,不支持主主复制.2.减轻主库的压力,并可以关闭主库的持久化功能,将持久化交给从库处理.可读写分离3 .主挂掉了,只能提供读服务,所以需要哨兵监视,并投票将从库升级为主库. 下">
 <meta property="og:type" content="article">
 <meta property="og:title" content="明一">
 <meta property="og:url" content="http://yoursite.com/2018/04/13/redis高可用_window/index.html">
 <meta property="og:site_name" content="明一">
-<meta property="og:description" content="reids主从+哨兵_window版 背景:1.Reids从库只有读取能力,没有写入能力;只支持主从复制,不支持主主复制.2.减轻主库的压力,并可以关闭主库的持久化功能,将持久化交给从库处理.可读写分离3 .主挂掉了,只能提供读服务,所以需要哨兵监视,并投票将从库升级为主库. 下载由于redis官方并不支持windows操作系统，所以官网上是下不到的，需要到gitlab,下载地址:    http">
+<meta property="og:description" content="========================= title: reids主从+哨兵_window版  ========================= 背景:1.Reids从库只有读取能力,没有写入能力;只支持主从复制,不支持主主复制.2.减轻主库的压力,并可以关闭主库的持久化功能,将持久化交给从库处理.可读写分离3 .主挂掉了,只能提供读服务,所以需要哨兵监视,并投票将从库升级为主库. 下">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://i.imgur.com/VhAxxTo.png">
 <meta property="og:image" content="https://i.imgur.com/YQH0hyH.png">
 <meta property="og:image" content="https://i.imgur.com/wbdhlOz.png">
-<meta property="og:updated_time" content="2018-04-13T09:32:48.794Z">
+<meta property="og:updated_time" content="2018-04-13T09:46:52.983Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="明一">
-<meta name="twitter:description" content="reids主从+哨兵_window版 背景:1.Reids从库只有读取能力,没有写入能力;只支持主从复制,不支持主主复制.2.减轻主库的压力,并可以关闭主库的持久化功能,将持久化交给从库处理.可读写分离3 .主挂掉了,只能提供读服务,所以需要哨兵监视,并投票将从库升级为主库. 下载由于redis官方并不支持windows操作系统，所以官网上是下不到的，需要到gitlab,下载地址:    http">
+<meta name="twitter:description" content="========================= title: reids主从+哨兵_window版  ========================= 背景:1.Reids从库只有读取能力,没有写入能力;只支持主从复制,不支持主主复制.2.减轻主库的压力,并可以关闭主库的持久化功能,将持久化交给从库处理.可读写分离3 .主挂掉了,只能提供读服务,所以需要哨兵监视,并投票将从库升级为主库. 下">
 <meta name="twitter:image" content="https://i.imgur.com/VhAxxTo.png">
 
 
@@ -303,7 +303,9 @@
       
 
       
-        <h1 id="reids主从-哨兵-window版"><a href="#reids主从-哨兵-window版" class="headerlink" title="reids主从+哨兵_window版"></a>reids主从+哨兵_window版</h1><hr>
+        <p>=========================</p>
+<p>title: reids主从+哨兵_window版 </p>
+<p>=========================</p>
 <h3 id="背景"><a href="#背景" class="headerlink" title="背景:"></a>背景:</h3><p>1.Reids从库只有读取能力,没有写入能力;只支持主从复制,不支持主主复制.<br>2.减轻主库的压力,并可以关闭主库的持久化功能,将持久化交给从库处理.可读写分离<br>3 .主挂掉了,只能提供读服务,所以需要哨兵监视,并投票将从库升级为主库.</p>
 <h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>由于redis官方并不支持windows操作系统，所以官网上是下不到的，需要到gitlab,下载地址:  </p>
 <blockquote>
@@ -484,7 +486,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#reids主从-哨兵-window版"><span class="nav-number">1.</span> <span class="nav-text">reids主从+哨兵_window版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#背景"><span class="nav-number">1.0.1.</span> <span class="nav-text">背景:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载"><span class="nav-number">1.0.2.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解压"><span class="nav-number">1.0.3.</span> <span class="nav-text">解压</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目标架构"><span class="nav-number">1.0.4.</span> <span class="nav-text">目标架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改-redis-windows-conf"><span class="nav-number">1.0.5.</span> <span class="nav-text">修改 redis.windows.conf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建sentinel-conf"><span class="nav-number">1.0.6.</span> <span class="nav-text">创建sentinel.conf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动"><span class="nav-number">1.0.7.</span> <span class="nav-text">启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提示"><span class="nav-number">1.0.8.</span> <span class="nav-text">提示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置文件详解"><span class="nav-number">1.0.9.</span> <span class="nav-text">配置文件详解</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载"><span class="nav-number">2.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解压"><span class="nav-number">3.</span> <span class="nav-text">解压</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目标架构"><span class="nav-number">4.</span> <span class="nav-text">目标架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改-redis-windows-conf"><span class="nav-number">5.</span> <span class="nav-text">修改 redis.windows.conf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建sentinel-conf"><span class="nav-number">6.</span> <span class="nav-text">创建sentinel.conf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动"><span class="nav-number">7.</span> <span class="nav-text">启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提示"><span class="nav-number">8.</span> <span class="nav-text">提示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置文件详解"><span class="nav-number">9.</span> <span class="nav-text">配置文件详解</span></a></li></ol></div>
             
 
           </div>
